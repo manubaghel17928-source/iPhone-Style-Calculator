@@ -1,0 +1,142 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #10131c;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.calculator {
+    width: 350px;
+    background: #1c2230;
+    padding: 22px;
+    border-radius: 25px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.5);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.header span {
+    color: #55b9ff;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.display {
+    background: #111722;
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 115px;
+    margin-bottom: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#previous {
+    color: #8995a8;
+    font-size: 16px;
+    min-height: 22px;
+    overflow-wrap: anywhere;
+}
+
+#current {
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 62px;
+    border: none;
+    border-radius: 14px;
+    background: #2b3445;
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #414e65;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.utility {
+    background: #39465a;
+    color: #55b9ff;
+}
+
+.operator {
+    background: #174d75;
+    color: #67c5ff;
+}
+
+.equal {
+    background: #1687c9;
+    color: white;
+}
+
+.equal:hover {
+    background: #219fe8;
+}
+
+.history {
+    margin-top: 25px;
+    color: white;
+}
+
+.history h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#history-list {
+    list-style: none;
+    color: #aeb9ca;
+    font-size: 13px;
+}
+
+#history-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid #303b4d;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        padding: 16px;
+    }
+
+    button {
+        height: 58px;
+    }
+}
